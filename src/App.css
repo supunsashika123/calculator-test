@@ -1,38 +1,109 @@
-.App {
+.card {
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.17);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.wrapper {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flexBox {
   display: flex;
-  flex-direction: column;
+}
+
+.textBoxWrapper {
+  padding-bottom: 20px;
+}
+
+.actionButtonWrapper {
+  margin-top: 10px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.centeredBox {
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+}
+
+.btn {
+  height: 40px;
+  width: 60px;
+  font-size: 18px;
+  background-color: #1da84d;
   color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.15);
+  transition: 0.2s all;
 }
 
-.App-link {
-  color: #61dafb;
+.btn:active {
+  transform: scale(0.96);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.txtBox {
+  background-color: #eff2f3;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  width: 130px;
+}
+
+.methodIconBox {
+  width: 30px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 20px;
+}
+
+.resetBtn {
+  padding: 15px 30px 15px 30px;
+  background-color: #ab3b33;
+  font-size: 15px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 5px 4px 15px 2px rgba(0, 0, 0, 0.15);
+  transition: 0.2s all;
+  font-weight: bold;
+}
+
+.resetBtn:active {
+  transform: scale(0.96);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.resultSectionWrapper {
+  margin-top: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.resultText {
+  color: #1da84d;
+  font-weight: bold;
+  animation: slide-up 0.1s;
+}
+
+.errorText {
+  color: red;
+  font-size: 18px;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
